@@ -82,35 +82,40 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
-echo -e "				       "
+echo -e " "
+echo -e " "
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e " \e[0;100;33m        • Abuddin yh Premium Script •           \e[0m"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\e[33m Operating System     \e[0m:  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
 echo -e "\e[33m Total Amount Of RAM  \e[0m:  $tram MB"
 echo -e "\e[33m Time Zone            \e[0m:  $WKT"
-echo -e "\e[33m Locatio              \e[0m:  $CITY"
 echo -e "\e[33m System Uptime        \e[0m:  $uptime "
 echo -e "\e[33m Isp Name             \e[0m:  $ISP"
 echo -e "\e[33m Domain               \e[0m:  $domain"	
 echo -e "\e[33m Ip Vps               \e[0m:  $IPVPS"
 echo -e "${CYAN}════════════════════════════════════════════════════════════\033[0m${NC}"
-echo -e "\E[44;1;39m              ⇱ SCRIPT MENU ⇲                                  \E[0m"
+echo -e "\E[44;1;39m              ⇱ SCRIPT MENU ⇲                           \E[0m"
 echo -e "${CYAN}════════════════════════════════════════════════════════════\033[0m${NC}"
-echo -e " [\e[36m•1\e[0m] SSH & OpenVPN Menu  [\e[36m•4\e[0m] Trojan-WS Menu  "
-echo -e " [\e[36m•2\e[0m] Vmess Menu          [\e[36m•5\e[0m] SSH UDP Menu    "
-echo -e " [\e[36m•3\e[0m] Vless Menu          [\e[36m•6\e[0m] Trojan-GO Menu  "
+echo -e " [\e[36m•1\e[0m] SSH & OpenVPN Menu  "
+echo -e " [\e[36m•2\e[0m] Vmess Menu          "
+echo -e " [\e[36m•3\e[0m] Vless Menu          "
+echo -e " [\e[36m•4\e[0m] Trojan-WS Menu      "
+echo -e " [\e[36m•5\e[0m] SSH UDP Menu        "
+echo -e " [\e[36m•6\e[0m] Trojan-GO Menu      "
 echo -e "${CYAN}════════════════════════════════════════════════════════════\033[0m${NC}"
-echo -e "\E[44;1;39m              ⇱ SETTING MENU ⇲                                 \E[0m"
 echo -e "${CYAN}════════════════════════════════════════════════════════════\033[0m${NC}"
-echo -e "$PURPLE [7] $NC GANTI DOMAIN         $PURPLE [15] $NC CEK BANDWITH "
-echo -e "$PURPLE [8] $NC RENEW CERTIFICATE    $PURPLE [16] $NC Clear RAM Cache "
-echo -e "$PURPLE [9] $NC CHANGE PORT          $PURPLE [17] $NC REBOOT VPS "
-echo -e "$PURPLE [10]$NC CHANGE BANNER        $PURPLE [18] $NC SPEEDTEST VPS "
-echo -e "$PURPLE [11]$NC BACKUP DATA VPS      $PURPLE [19] $NC MENU SETTING "
-echo -e "$PURPLE [12]$NC RESTORE DATA VPS     $PURPLE [20] $NC SET AUTO REBOT "
-echo -e "$PURPLE [13]$NC WEBMIN MENU          $PURPLE [21] $NC RESTARTS "
-echo -e "$PURPLE [14]$NC RUNNING SYSTEM       $PURPLE [22] $NC INFO SCRIPT "
-echo -e "${CYAN}════════════════════════════════════════════════════════════\033[0m${NC}"
-echo -e "\E[44;1;39m          Join My Grup[https://t.me/TazVPN                      \E[0m"
-echo -e "${CYAN}════════════════════════════════════════════════════════════\033[0m${NC}"
+echo -e "$PURPLE (7) $NC GANTI DOMAIN         $PURPLE (15) $NC CEK BANDWITH "
+echo -e "$PURPLE (8) $NC RENEW CERTIFICATE    $PURPLE (16) $NC Clear RAM Cache "
+echo -e "$PURPLE (9) $NC CHANGE PORT          $PURPLE (17) $NC REBOOT VPS "
+echo -e "$PURPLE (10) $NC CHANGE BANNER       $PURPLE (18) $NC SPEEDTEST VPS "
+echo -e "$PURPLE (11) $NC BACKUP DATA VPS     $PURPLE (19) $NC Install UDP-Custom "
+echo -e "$PURPLE (12) $NC RESTORE DATA VPS    $PURPLE (20) $NC SET AUTO REBOT "
+echo -e "$PURPLE (13) $NC WEBMIN MENU         $PURPLE (21) $NC RESTARTS "
+echo -e "$PURPLE (14) $NC RUNNING SYSTEM      $PURPLE (22) $NC INFO SCRIPT "
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e " \e[0;100;33m        • AutoScript by Abuddin yh •            \e[0m"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e   " Press x or [ Ctrl+C ] • To-Exit-Script"
 echo -e   ""
 echo -e   ""
@@ -135,7 +140,7 @@ case $opt in
 16) clear ; clearcache ;;
 17) clear ; reboot ;;
 18) clear ; speedtest ;;
-19) clear ; menu-set ;;
+19) clear ; wget "https://raw.githubusercontent.com/Andyyuda/UDP-Custom-Installer-Manager/main/install.sh" -O install.sh && chmod +x install.sh && ./install.sh ;;
 20) clear ; auto-reboot ;;
 21) clear ; restart ;;
 22) clear ; about ;;
