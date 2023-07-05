@@ -140,7 +140,7 @@ case $opt in
 16) clear ; clearcache ;;
 17) clear ; reboot ;;
 18) clear ; speedtest ;;
-19) clear ; wget "https://raw.githubusercontent.com/Andyyuda/UDP-Custom-Installer-Manager/main/install.sh" -O install.sh && chmod +x install.sh && ./install.sh ;;
+19) clear ; menus ;;
 20) clear ; auto-reboot ;;
 21) clear ; restart ;;
 22) clear ; about ;;
